@@ -1,6 +1,14 @@
 [user]
 	email = diego.silperes@gmail.com
-  name = Diego Silva
+ 	name = Diego Silva
 
 [init]
 	defaultBranch = master 
+[alias]	
+	cm = commit -m
+	ps = push
+	d = diff
+	b = branch
+	cl = clone
+	s = status
+

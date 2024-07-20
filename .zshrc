@@ -11,7 +11,7 @@ export PATH=/home/silva/.local/bin:$PATH
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git  python pip zsh-autosuggestions fzf tmux )
+plugins=(git  python pip zsh-autosuggestions zsh-syntax-highlighting fzf tmux )
 
 source $ZSH/oh-my-zsh.sh
 

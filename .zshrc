@@ -4,10 +4,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Path to your Oh My Zsh installation.
+
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_BASE=/path/to/fzf/install/dir
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH=/home/silva/.local/bin:$PATH
+export PATH=/home/diego/.local/bin:$PATH
+
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

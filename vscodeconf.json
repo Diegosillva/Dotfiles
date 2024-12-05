@@ -1,0 +1,32 @@
+{
+  // Config visual
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "editor.fontSize": 18,
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 14,
+  "editor.lineHeight": 1.8,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.renderLineHighlight": "gutter",
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.labelFormat": "short",
+  "workbench.activityBar.location": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "symbols",
+  "explorer.compactFolders": false,
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+}

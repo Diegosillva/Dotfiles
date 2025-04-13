@@ -1,7 +1,7 @@
 # Meus dotfiles
 Esse diretorio contem os dotfiles para meu sistema
 ## Requerimento
-Certifique-se de ter o seguinte instalado em seu sistema
+Certifique-se de ter instalado no seu sistema.
 ## Git
 ```
 sudo apt install git
@@ -11,12 +11,19 @@ sudo apt install git
 sudo apt-get install stow
 ```
 # Instalação
-Primeiro, verifique o repositório dotfiles em seu diretório $HOME usando git.
+Crie uma pasta dentro da sua $HOME
 ```
-$ https://github.com/Diegosillva/Dotfiles.git
-$ cd dotfiles
+mkdir dotfiles
 ```
-Então use GNU stow para criar links simbólicos
+Clone o repositorio na sua maquina.
+```
+$ git clone https://github.com/Diegosillva/Dotfiles.git
+```
+Depois execute o install.sh dentro da sua pasta Dotfiles.
+```
+run install.sh
+```
+Então use GNU stow para criar links simbólicos.
 ```
 $ stow .
 ```

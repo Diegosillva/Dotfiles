@@ -10,14 +10,13 @@ sudo apt install git
 ```
 sudo apt-get install stow
 ```
-## Instalação
-
-Primeiro, verifique o repositório dotfiles em seu diretório $HOME usando git
+# Instalação
+Primeiro, verifique o repositório dotfiles em seu diretório $HOME usando git.
 ```
 $ https://github.com/Diegosillva/Dotfiles.git
 $ cd dotfiles
 ```
-então use GNU stow para criar links simbólicos
+Então use GNU stow para criar links simbólicos
 ```
 $ stow .
 ```

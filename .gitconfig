@@ -1,7 +1,6 @@
 [user]
 	email = diego.silperes@gmail.com
  	name = Diego Silva
-
 [init]
 	defaultBranch = master 
 [alias]	
@@ -14,3 +13,5 @@
 [credential]
     helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
+[core]
+	editor = vim

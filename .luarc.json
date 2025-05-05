@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "single_file_suport",
+        "local",
+        "lint",
+        "lspconfig",
+        "Snacks"
+    ]
+}

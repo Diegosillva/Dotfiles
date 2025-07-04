@@ -7,6 +7,20 @@ return {
 			require("mason").setup()
 		end,
 	},
+
+	{
+		"mason-org/mason.nvim",
+		opts = {
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
+				},
+			},
+		},
+	},
+
 	{
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
@@ -14,6 +28,7 @@ return {
 			auto_install = true,
 		},
 	},
+
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
@@ -27,6 +42,22 @@ return {
 				cmp_nvim_lsp.default_capabilities()
 			)
 			lspconfig.lua_ls.setup({})
+			lspconfig.python.setup({})
+
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+				cmd = { "gopls" },
+				filetypes = { "go", "gomod", "gowork", "gotmpl" },
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						analyses = {
+							unusedparams = true,
+						},
+					},
+				},
+			})
+
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})

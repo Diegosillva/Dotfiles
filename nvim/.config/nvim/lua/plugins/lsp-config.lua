@@ -42,7 +42,7 @@ return {
 				cmp_nvim_lsp.default_capabilities()
 			)
 			lspconfig.lua_ls.setup({})
-			lspconfig.python.setup({})
+			lspconfig.pyright.setup({})
 
 			lspconfig.gopls.setup({
 				capabilities = capabilities,

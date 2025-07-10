@@ -6,7 +6,7 @@ return {
 				theme = "tokyonight",
 			},
 			sections = {
-				lualine_y = {
+				lualine_a = {
 					{
 						"diagnostics",
 						sources = { "nvim_diagnostic" },

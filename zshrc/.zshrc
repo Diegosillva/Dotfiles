@@ -20,11 +20,14 @@ SAVEHIST=50000
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
 alias la="ls -la"
-alias tmux="tmux -f ~/.config/tmux/.tmux.conf"
+alias n="nvim"
+alias tmux="tmux -f ~/Dotfiles/tmux/.tmux.conf"
 alias ali="alacritty"
 
 
 
 export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/init-nvm.sh
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

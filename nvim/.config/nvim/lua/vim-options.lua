@@ -12,6 +12,8 @@ vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
 vim.opt.breakindent = true
 vim.opt.smartindent = true
+vim.opt.relativenumber = true
+vim.opt.syntax = on
 
 vim.cmd([[
   highlight CursorNormal guifg=white guibg=#5fff5f

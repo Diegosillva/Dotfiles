@@ -19,10 +19,13 @@ SAVEHIST=50000
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
-alias la="ls -la"
+# alias la="ls -la"
 alias n="nvim"
 alias tmux="tmux -f ~/Dotfiles/tmux/.tmux.conf"
 alias ali="alacritty"
+alias ls='eza --icons --color=auto --group-directories-first'
+alias ll='eza -l --icons --color=auto --group-directories-first'
+alias la='eza -la --icons --color=auto --group-directories-first'
 
 
 

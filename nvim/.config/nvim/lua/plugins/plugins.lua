@@ -22,9 +22,19 @@ return {
 		config = function()
 			require("bufferline").setup({
 				options = {
+					-- style_preset = bufferline.style_preset.no_italic,
 					diagnostics = "nvim_lsp",
 					show_buffer_close_icons = false,
+					show_buffer_icons = true,
 					separator_style = "slant",
+					modified_icon = "● ",
+					middle_mouse_command = nil,
+					color_icons = true,
+					hover = {
+						enabled = true,
+						delay = 200,
+						reveal = { "close" },
+					},
 				},
 			})
 		end,

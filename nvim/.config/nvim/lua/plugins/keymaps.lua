@@ -13,6 +13,8 @@ return {
 
 	vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Próximo buffer" }),
 	vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Buffer anterior" }),
+	vim.keymap.set("n", "<leader>bd", "<Cmd>bd<CR>", { desc = "Fechar buffer atual" }),
+
 	-- Split window
 	vim.keymap.set("n", "<leader>s", ":split<CR>", { noremap = true, silent = true }),
 	vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { noremap = true, silent = true }),

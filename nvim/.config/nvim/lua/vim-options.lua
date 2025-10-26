@@ -14,12 +14,31 @@ vim.opt.breakindent = true
 vim.opt.smartindent = true
 vim.opt.relativenumber = true
 vim.opt.syntax = on
+vim.opt.showtabline = 2
+
+-- Mostra o texto copiado (yank) com uma cor personalizada
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "YankHighlight",
+			timeout = 300, -- tempo em milissegundos (aumente se quiser)
+		})
+	end,
+})
 
 vim.cmd([[
-  highlight CursorNormal guifg=white guibg=#5fff5f
-  highlight CursorInsert guifg=white guibg=#8C1620
-  highlight CursorVisual guifg=black guibg=#5f5fff
+  highlight CursorNormal guifg=#1E1E2E guibg=#A6E3A1   " verde suave
+  highlight CursorInsert guifg=#1E1E2E guibg=#89B4FA   " azul claro
+  highlight CursorVisual guifg=#1E1E2E guibg=#F38BA8   " rosa pastel
+  highlight YankHighlight guibg=#F9E2AF guifg=#1E1E2E  " amarelo suave para cópia
 ]])
+
+-- vim.cmd([[
+--   highlight CursorNormal guifg=white guibg=#5fff5f
+--   highlight CursorInsert guifg=white guibg=#8C1620
+--   highlight CursorVisual guifg=black guibg=#5f5fff
+--   highlight YankHighlight guibg=#005f87 guifg=white
+-- ]])
 
 vim.opt.guicursor = table.concat({
 	"n:block-CursorNormal", -- modo normal

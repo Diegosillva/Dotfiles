@@ -7,9 +7,15 @@ return {
 
 	vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>"),
 	vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true }),
+	vim.keymap.set("n", "<leader>w", ":wa<CR>", { noremap = true, silent = true }),
+	vim.keymap.set("n", "<leader>q", ":q<CR>", { noremap = true, silent = true }),
+	vim.keymap.set("n", "<leader>x", ":wqa<CR>", { noremap = true, silent = true }),
+
+	vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Próximo buffer" }),
+	vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Buffer anterior" }),
 	-- Split window
-	vim.keymap.set("n", "ss", ":split<CR>", { noremap = true, silent = true }),
-	vim.keymap.set("n", "sv", ":vsplit<CR>", { noremap = true, silent = true }),
+	vim.keymap.set("n", "<leader>s", ":split<CR>", { noremap = true, silent = true }),
+	vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { noremap = true, silent = true }),
 	-- Desabilita as setas
 	vim.keymap.set("n", "<Up>", "<Nop>"),
 	vim.keymap.set("n", "<Down>", "<Nop>"),

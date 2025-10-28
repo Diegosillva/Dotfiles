@@ -15,14 +15,17 @@ vim.opt.smartindent = true
 vim.opt.relativenumber = true
 vim.opt.syntax = on
 vim.opt.showtabline = 2
+vim.wo.number = true
+vim.g.autoformat = true
+vim.g.mapleader = " "
+vim.opt.incsearch = true
 
--- Mostra o texto copiado (yank) com uma cor personalizada
-vim.api.nvim_create_autocmd("TextYankPost", {
+vim.api.nvim_create_autocmd("textyankpost", {
+	group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+	pattern = "*",
+	desc = "highlight selection on yank",
 	callback = function()
-		vim.highlight.on_yank({
-			higroup = "YankHighlight",
-			timeout = 300, -- tempo em milissegundos (aumente se quiser)
-		})
+		vim.highlight.on_yank({ timeout = 200, visual = true })
 	end,
 })
 
@@ -47,8 +50,4 @@ vim.opt.guicursor = table.concat({
 	"c:hor20-CursorCommand", -- modo command-line (opcional)
 }, ",")
 
-vim.wo.number = true
-
-vim.g.autoformat = true
-vim.g.mapleader = " "
 -- vim.o.background = "light"

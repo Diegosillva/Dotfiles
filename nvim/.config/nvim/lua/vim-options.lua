@@ -49,5 +49,3 @@ vim.opt.guicursor = table.concat({
 	"v:block-CursorVisual", -- modo visual
 	"c:hor20-CursorCommand", -- modo command-line (opcional)
 }, ",")
-
--- vim.o.background = "light"

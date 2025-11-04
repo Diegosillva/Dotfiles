@@ -26,11 +26,4 @@ return {
 	vim.keymap.set("n", "<Right>", "<Nop>"),
 
 	vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { silent = false }),
-
-	-- Open the diagnostic under the cursor in a float window
-	vim.keymap.set("n", "<leader>d", function()
-		vim.diagnostic.open_float({
-			border = "rounded",
-		})
-	end, opts),
 }

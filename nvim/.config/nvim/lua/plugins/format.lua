@@ -3,7 +3,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
-			golang = { "goimports", "goimports", "golines" },
+			golang = { "goimports", "golines" },
 			python = { "isort", "black" },
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
@@ -16,5 +16,5 @@ return {
 			lsp_format = "fallback",
 		},
 	},
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Formatar com LSP" }),
+	vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Formatar com LSP" }),
 }

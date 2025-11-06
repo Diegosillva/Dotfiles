@@ -1,21 +1,30 @@
 return {
+
 	{
 		"catppuccin/nvim",
 		lazy = false,
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			integrations = {
-				neotree = true,
-				treesitter = true,
-				notify = false,
-			}
-			styles = {
-				comments = { "italic" }, -- Change the style of comments
-			}
-			vim.cmd.colorscheme([[catppuccin-mocha]])
+			require("catppuccin").setup({
+				transparent_background = true,
+				integrations = {
+					neotree = true,
+					treesitter = true,
+					notify = false,
+				},
+				styles = {
+					comments = { "italic" },
+				},
+			})
+
+			vim.cmd.colorscheme("catppuccin-mocha")
+			vim.cmd([[
+      highlight CursorLine guibg=none
+      ]])
 		end,
 	},
+
 	-- {
 	-- 	"folke/tokyonight.nvim",
 	-- 	lazy = false,

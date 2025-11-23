@@ -36,13 +36,6 @@ vim.cmd([[
   highlight YankHighlight guibg=#F9E2AF guifg=#1E1E2E  " amarelo suave para cópia
 ]])
 
--- vim.cmd([[
---   highlight CursorNormal guifg=white guibg=#5fff5f
---   highlight CursorInsert guifg=white guibg=#8C1620
---   highlight CursorVisual guifg=black guibg=#5f5fff
---   highlight YankHighlight guibg=#005f87 guifg=white
--- ]])
-
 vim.opt.guicursor = table.concat({
 	"n:block-CursorNormal", -- modo normal
 	"i:ver25-CursorInsert", -- modo insert

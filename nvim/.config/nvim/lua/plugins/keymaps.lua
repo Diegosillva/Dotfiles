@@ -11,6 +11,9 @@ return {
 	vim.keymap.set("n", "<leader>q", ":q<CR>", { silent = false }),
 	vim.keymap.set("n", "<leader>x", "<cmd>wq<cr>", { silent = false }),
 
+	vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>"),
+	vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>"),
+
 	vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Próximo buffer" }),
 	vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Buffer anterior" }),
 	vim.keymap.set("n", "<leader>bd", "<Cmd>bd<CR>", { desc = "Fechar buffer atual" }),

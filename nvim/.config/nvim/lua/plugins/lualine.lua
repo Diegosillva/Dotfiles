@@ -3,36 +3,42 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
+				theme = "dracula",
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
-				theme = "dracula", -- gruvbox, nord,dracula
+				icons_enabled = true,
 			},
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "buffers" },
-				lualine_x = { "tabs" },
-				lualine_y = { "progress" },
-				lualine_z = {
+				lualine_c = {
 					{
-						-- "diagnostics",
-						-- sources = { "nvim_diagnostic", "nvim_lsp" },
-						--
-						-- sections = { "error", "warn", "info", "hint" },
-						--
-						-- diagnostics_color = {
-						-- 	error = "DiagnosticError", -- Changes diagnostics' error color.
-						-- 	warn = "DiagnosticWarn", -- Changes diagnostics' warn color.
-						-- 	info = "DiagnosticInfo", -- Changes diagnostics' info color.
-						-- 	hint = "DiagnosticHint", -- Changes diagnostics' hint color.
-						-- },
-						-- symbols = { error = "E", warn = "W", info = "I", hint = "H" },
-						-- colored = true, -- Displays diagnostics status in color if set to true.
-						-- update_in_insert = false, -- Update diagnostics in insert mode.
-						-- always_visible = false, -- Show diagnostics even if there are none.
+						"filename",
+						file_status = true,
+						newfile_status = false,
+						path = 0, -- 0 = filename, 1 = relative path, 2 = full path
+						symbols = {
+							modified = " ●",
+							alternate_file = "",
+							directory = "",
+						},
 					},
 				},
+				lualine_x = { "encoding", "fileformat", "filetype" },
+				lualine_y = { "progress" },
+				lualine_z = { "location" },
+			},
+
+			inactive_sections = {
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = { "filename" },
+				lualine_x = { "location" },
+				lualine_y = {},
+				lualine_z = {},
 			},
 		})
 	end,
+	vim.keymap.set("n", "<TAB>", "<cmd>bnext<CR>", { silent = true }),
+	vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Fechar buffer", silent = true }),
 }

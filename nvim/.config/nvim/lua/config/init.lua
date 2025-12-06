@@ -1,0 +1,5 @@
+require("config.lazy")
+require("config.vim_opts")
+require("config.keymaps")
+require("config.diagnostics")
+require("config.autocmds")

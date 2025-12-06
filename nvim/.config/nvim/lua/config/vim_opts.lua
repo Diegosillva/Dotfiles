@@ -1,0 +1,22 @@
+vim.g.mapleader = " "
+vim.opt.clipboard = "unnamedplus"
+vim.opt.inccommand = "split"
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.signcolumn = "yes"
+vim.opt.shada = { "'10", "<0", "s10", "h" }
+vim.opt.swapfile = false
+vim.opt.formatoptions:remove("o")
+vim.opt.colorcolumn = "80"
+vim.opt.textwidth = 80
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.more = false
+vim.opt.foldmethod = "manual"
+vim.opt.undofile = true

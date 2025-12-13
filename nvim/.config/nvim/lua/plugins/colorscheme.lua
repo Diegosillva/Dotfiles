@@ -19,8 +19,8 @@ return {
 
 			vim.cmd.colorscheme("catppuccin-mocha")
 			vim.cmd([[
-      highlight CursorLine guibg=none
-      ]])
+	     highlight CursorLine guibg=none
+	     ]])
 		end,
 	},
 	-- {

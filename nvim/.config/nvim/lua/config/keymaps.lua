@@ -11,6 +11,7 @@ return {
 	vim.keymap.set("n", "<leader>w", "<cmd>:wa<CR>", { desc = "Salva todos os arquivos editados" }),
 	vim.keymap.set({ "n", "t" }, "<leader>q", ":q<cr>", { silent = false, noremap = true }),
 	vim.keymap.set("n", "<space><space>x", "<cmd>source % <CR>"),
+	vim.keymap.set("n", "<space><space>c", ":", { silent = false, noremap = true }),
 
 	vim.keymap.set("n", "<leader>v", "<cmd>vsplit<CR>", { desc = "Dividi a tela na vertical" }),
 	vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { silent = false }),
